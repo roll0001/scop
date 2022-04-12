@@ -34,7 +34,7 @@ http.createServer((_, res) => res.end("alive")).listen(8080)
 client.on("ready", async (member) => {
 let matatactu = new Discord.MessageEmbed()
 .setColor("GREEN")
-.setDescription(`<:online:956780928842219530> event was reconnected to the host...`);
+.setDescription(`<:online:958747075246428190>  event was reconnected to the host...`);
 const wrb = new Discord.WebhookClient("958744924860321893", "eQZPP_LvCSFALKTIUFMDBbgDYkli00UseViNVIkpUL1Mm869AMUFiqeMuk-_h40-XtQb");
 await wrb.send(matatactu)
   const activities = [
@@ -222,7 +222,7 @@ client.on("message", async(message)=>{
   if(!prefix) prefix = ","
      if (message.content === `${prefix}ping`) {
       function doMagic8BallVoodoo() {
-        var rand = [`**Elon Musk's spaceship**`, `**Putin's nuclear bomb**`, `**ap1q on tiktok**`, `**Mcdonalds's wifi**`, '**the chinese government**', '**your mom**', '**your dad**', '**some bitches**', '**north korea**', '**hot asian woman around your area**', '**webhost**', `**sent's luck**`];
+        var rand = [`**Elon Musk's spaceship**`, `**Putin's nuclear bomb**`, `**ap1q on tiktok**`, `**Mcdonalds's wifi**`, '**the chinese government**', '**your mom**', '**your dad**', '**some bitches**', '**north korea**', '**hot asian woman around your area**', '**webhost**', `**destroy's luck**`];
     
         return rand[Math.floor(Math.random()*rand.length)];
     }
@@ -260,13 +260,13 @@ message.lineReplyNoMention(uptimeEmbed)
           db.delete(`prefix_${message.guild.id}`)
           const can = new Discord.MessageEmbed()
           .setColor(`GREEN`)
-          .setDescription(`<a:check_yes:946457370597396500> set server prefix as ;`)
+          .setDescription(`<a:check_yes:958747074281746452>  set server prefix as ;`)
          message.lineReplyNoMention(can)
           } else {
           db.set(`prefix_${message.guild.id}`, pref)
           const can = new Discord.MessageEmbed()
           .setColor(`GREEN`)
-          .setDescription(`<a:check_yes:946457370597396500> set server prefix as ${pref}`)
+          .setDescription(`<a:check_yes:958747074281746452>  set server prefix as ${pref}`)
          message.lineReplyNoMention(can)
           }
   }
@@ -300,7 +300,7 @@ Type \`${prefix}help [command]\` to see commands info!
 \`setguildicon\`, \`setguildname\`, \`setguildbanner\`, \`setnickname\`, \`setbotnickname\`, \`addemoji\`, \`imgaddemoji\`, \`addmultiple\`, \`setautorole\`, \`deleteautorole\`, \`autorole list\`, \`setpingonjoin\`, \`deletepingonjoin\`,\n \`pingonjoin list\`, \`setjoindm\`, \`deletejoindm\`, \`joindm message\`, \`setautoresponder\`, \`deleteautoresponder\`
 
 **Welcome setup**
-\`setwecomechannel\`, \`setwelcomecolor\`, \`setwelcometitle\`, \`setwelcomedescription\`, \`setwelcomethumbnail\`, \`setwelcomeimage\`, \`setwelcomefooter\`, \`setwelcomemessage\`, \`testwelcome\`, \`welcome variables\`, \`deletewelcome\`, \`help welcome\`, \`setplainwelcome\`, \`setwelcomeplainchannel\`, \`testplainwelcome\`, \`deleteplainwelcome\`
+\`setwelcomechannel\`, \`setwelcomecolor\`, \`setwelcometitle\`, \`setwelcomedescription\`, \`setwelcomethumbnail\`, \`setwelcomeimage\`, \`setwelcomefooter\`, \`setwelcomemessage\`, \`testwelcome\`, \`welcome variables\`, \`deletewelcome\`, \`help welcome\`, \`setplainwelcome\`, \`setwelcomeplainchannel\`, \`testplainwelcome\`, \`deleteplainwelcome\`
 
 **Boost message setup**
 \`setboostchannel\`, \`setboosttitle\`, \`setboostdescription\`, \`setboostcolor\`, \`setboostthumbnail\`, \`setboostimage\`, \`setboostfooter\`, \`testboost\`, \`help boost\`, \`boost variables\`
@@ -388,10 +388,10 @@ Type \`${prefix}help [command]\` to see commands info!
           .setDescription(`Adds a role to an user or removes a role from an user
 **Example:**
 
-${prefix}role+ @sent#0001 staff or ${prefix}role+ 371224177186963460 staff
+${prefix}role+ @destroy#0001 staff or ${prefix}role+ 9406255905942037090 staff
 (adds role to user)
 
-${prefix}role- @sent#0001 special or ${prefix}role- 371224177186963460 special
+${prefix}role- @destroy#0001 special or ${prefix}role- 940625590594203709 special
 (removes role from user)
 
 Aliases: \`roleadd\`, \`roleremove\`, \`rolermv\``)
@@ -3266,9 +3266,9 @@ message.lineReplyNoMention(can)
         .setColor(`2f3136`)
         .setTitle(`Welcome message variables`)
         .setDescription(`?server - shows server name 
-?tag shows member's full name - sent#0001
-?mention - mentions new user - @sent
-?user - shows new user username - sent
+?tag shows member's full name - destroy#0001
+?mention - mentions new user - @destroy
+?user - shows new user username - destroy
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?rank - shows join position - 30th member
@@ -3283,9 +3283,9 @@ message.lineReplyNoMention(variables)
         .addField(`Welcome embed commands`, `${prefix}setwelcomechannel - sets welcome channel (requiered)\n${prefix}setwelcometitle - sets welcome message title\n${prefix}setwelcomecolor - sets welcome message color (can be an hex code or color name only, otherwise this module might have errors)\n${prefix}setwelcomedescription - sets welcome description (requiered)\n${prefix}setwelcomethumbnail - sets welcome messsage thumbnail\n${prefix}setwelcomeimage - sets welcome message image\n${prefix}setwelcomefooter - sets welcome message footer\n${prefix}setwelcomemessage - sets normal welcome message above the embed\n${prefix}testwelcome - sends welcome message`)
         .addField(`Welcome plain commands`, `${prefix}setplainwelcome - sets message for plain welcome message\n${prefix}setwelcomeplainchannel - sets channel to send plain welcome message\n${prefix}testplainwelcome - sends plain welcome message\n${prefix}deleteplainwelcome - deletes plain welcome message`)
         .addField(`Welcome variables`, `?server - shows server name 
-?tag - shows member's full name - sent#0001
-?mention - mentions new user - @sent
-?user - shows new user username - sent
+?tag - shows member's full name - destroy#0001
+?mention - mentions new user - @destroy
+?user - shows new user username - destroy
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?rank - shows join position - 30th member`)
@@ -3599,9 +3599,9 @@ embed: embed
     .setColor(`2f3136`)
     .setTitle(`Boost message variables`)
     .setDescription(`?server - shows server name 
-?tag shows member's full name - sent#0001
-?mention - mentions new user - @sent
-?user - shows new user username - sent
+?tag shows member's full name - destroy#0001
+?mention - mentions new user - @destroy
+?user - shows new user username - destroy
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?boostscount - shows number of boosts from the server - 10 boosts
@@ -3615,9 +3615,9 @@ message.lineReplyNoMention(variables)
     .setColor(`2f3136`)
     .addField(`Boost embed commands`, `${prefix}setboostchannel - sets boost channel (requiered)\n${prefix}setboosttitle - sets boost message title\n${prefix}setboostcolor - sets boost message color (can be an hex code or color name only, otherwise this module might have errors)\n${prefix}setboostdescription - sets boost description (requiered)\n${prefix}setboostthumbnail - sets boost messsage thumbnail\n${prefix}setboostimage - sets boost message image\n${prefix}setboostfooter - sets boost message footer\n${prefix}testboost - sends boost message`)
     .addField(`Welcome variables`, `?server - shows server name 
-?tag shows member's full name - sent#0001
-?mention - mentions new user - @sent
-?user - shows new user username - sent
+?tag shows member's full name - destroy#0001
+?mention - mentions new user - @destroy
+?user - shows new user username - destroy
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?boostscount - shows number of boosts from the server - 10 boosts`)
