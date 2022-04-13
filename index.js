@@ -1255,7 +1255,10 @@ if (message.content === `${prefix}invite`|| message.content === `${prefix}suppor
         const button4 = new buttonClient.MessageButton()
       .setLabel("Invite Link")
       .setURL("https://discord.com/api/oauth2/authorize?client_id=957962158124171296&permissions=8&scope=bot")
-    buttonClient.send(null, { channel: message.channel.id, embed, buttons: [[button4]] })
+      buttonClient.send(null, { channel: message.channel.id, embed, buttons: [[button1]] })
+      .setLabel("Support Server")
+      .setURL("https://discord.gg/PnZSVgUfPA")
+    buttonClient.send(null, { channel: message.channel.id, embed, buttons: [[button2]] })
   }
   /* 
 
@@ -1571,7 +1574,7 @@ if(message.content === `${prefix}botinfo`) {
   .setColor(`2f3136`)
   .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b91b128b3413d7ad19bd58c470169e1d.webp?size=1024`)
   .setDescription(`a multipurpose bot that does some great stuff...
-  **Dm <@940625590594203709> if you have any issue.**`)
+  **Dm destroy#0001 if you have any issue.**`)
   .addField(`statistics`,
 `guilds: **${client.guilds.cache.size} servers**
 users: **${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}**
