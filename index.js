@@ -1572,7 +1572,7 @@ if(message.content === `${prefix}botinfo`) {
   .setColor(`2f3136`)
   .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b91b128b3413d7ad19bd58c470169e1d.webp?size=1024`)
   .setDescription(`a multipurpose bot that does some great stuff...
-  **Dm destroy#0001 if you have any issue.**`)
+  **Join Support Server [here](https://discord.gg/PnZSVgUfPA)**`)
   .addField(`statistics`,
 `guilds: **${client.guilds.cache.size} servers**
 users: **${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}**
