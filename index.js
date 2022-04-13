@@ -2423,7 +2423,7 @@ const filterLevels = {
             .addField(`Owner`, `${message.guild.owner}`, true)
             .addField(`Verification Level`, `${verificationLevels[message.guild.verificationLevel]}`, true)
             .addField(`Member Count`, `${message.guild.memberCount}`, true)
-            .addField(`Channels`, `<:channel_text:956573288912527410> ${channels.filter(channel => channel.type === 'text').size}\n<:channel_voice:956573359536209972> ${channels.filter(channel => channel.type === 'voice').size}`, true)
+            .addField(`Channels`, `<:Channel:961286957500076072> <:Channel:961286957500076072>  ${channels.filter(channel => channel.type === 'text').size}\n<:blurp3:961286960670990336>  ${channels.filter(channel => channel.type === 'voice').size}`, true)
             .addField(`Server prefix`, `${prefix}`, true)
             .addField(`Boosts`, `${message.guild.premiumSubscriptionCount || '0'}`, true)
             .addField(`Roles Count`, `${roles.length} roles`)
@@ -4235,7 +4235,7 @@ message.delete()
 
 client.on("guildCreate", async(guild) => {
    const joinguild = new Discord.MessageEmbed()
-   .setTitle(`<a:check_yes:956780923649679370> Joined a guild`)
+   .setTitle(`<a:check_yes:958747074281746452>  Joined a guild`)
    .setColor(`2f3136`)
    .setDescription(`Joined ${guild.name}`)
    .setThumbnail(guild.iconURL({ dynamic: true}))
@@ -4248,7 +4248,7 @@ client.on("guildCreate", async(guild) => {
 
 client.on("guildDelete", async(guild) => {
   const leaveguild = new Discord.MessageEmbed()
-  .setTitle(`<a:check_no:956780921342795787> Left a guild`)
+  .setTitle(`<a:check_no:958747076022390854>  Left a guild`)
   .setColor(`2f3136`)
   .setDescription(`Left ${guild.name}`)
   .setThumbnail(guild.iconURL({ dynamic: true}))
