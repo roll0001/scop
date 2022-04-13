@@ -1256,9 +1256,6 @@ if (message.content === `${prefix}invite`|| message.content === `${prefix}suppor
         const button1 = new buttonClient.MessageButton()
       .setLabel("Invite Link")
       .setURL("https://discord.com/api/oauth2/authorize?client_id=957962158124171296&permissions=8&scope=bot")
-      buttonClient.send(null, { channel: message.channel.id, embed, buttons: [[button1]] })
-      .setLabel("Support Server")
-      .setURL("https://discord.gg/PnZSVgUfPA")
     buttonClient.send(null, { channel: message.channel.id, embed, buttons: [[button4]] })
   }
   /* 
