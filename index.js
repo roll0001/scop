@@ -2429,7 +2429,6 @@ const filterLevels = {
             .addField(`Roles Count`, `${roles.length} roles`)
             .addField(`Explicit Filter`, `${filterLevels[message.guild.explicitContentFilter]}`, true)
             .addField(`Server created`, `${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')}\n[${moment(message.guild.createdTimestamp).fromNow()}]`, true)
-            .addField(`Roles [${roles.length}]`, rolesdisplay)
             .setFooter(`ID: ${message.guild.id}`)
             .setTimestamp();
         message.lineReplyNoMention(embed);
