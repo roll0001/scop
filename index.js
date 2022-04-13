@@ -2423,7 +2423,7 @@ const filterLevels = {
             .addField(`Owner`, `${message.guild.owner}`, true)
             .addField(`Verification Level`, `${verificationLevels[message.guild.verificationLevel]}`, true)
             .addField(`Member Count`, `${message.guild.memberCount}`, true)
-            .addField(`Channels`, `<:Channel:961286957500076072> <:Channel:961286957500076072>  ${channels.filter(channel => channel.type === 'text').size}\n<:blurp3:961286960670990336>  ${channels.filter(channel => channel.type === 'voice').size}`, true)
+            .addField(`Channels`, ` <:Channel:961286957500076072>  ${channels.filter(channel => channel.type === 'text').size}\n<:blurp3:961286960670990336>  ${channels.filter(channel => channel.type === 'voice').size}`, true)
             .addField(`Server prefix`, `${prefix}`, true)
             .addField(`Boosts`, `${message.guild.premiumSubscriptionCount || '0'}`, true)
             .addField(`Roles Count`, `${roles.length} roles`)
