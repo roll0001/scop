@@ -3268,9 +3268,9 @@ message.lineReplyNoMention(can)
         .setColor(`2f3136`)
         .setTitle(`Welcome message variables`)
         .setDescription(`?server - shows server name 
-?tag shows member's full name - destroy#0001
-?mention - mentions new user - @destroy
-?user - shows new user username - destroy
+?tag shows member's full name - map#0001
+?mention - mentions new user - @map
+?user - shows new user username - map
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?rank - shows join position - 30th member
@@ -3285,9 +3285,9 @@ message.lineReplyNoMention(variables)
         .addField(`Welcome embed commands`, `${prefix}setwelcomechannel - sets welcome channel (requiered)\n${prefix}setwelcometitle - sets welcome message title\n${prefix}setwelcomecolor - sets welcome message color (can be an hex code or color name only, otherwise this module might have errors)\n${prefix}setwelcomedescription - sets welcome description (requiered)\n${prefix}setwelcomethumbnail - sets welcome messsage thumbnail\n${prefix}setwelcomeimage - sets welcome message image\n${prefix}setwelcomefooter - sets welcome message footer\n${prefix}setwelcomemessage - sets normal welcome message above the embed\n${prefix}testwelcome - sends welcome message`)
         .addField(`Welcome plain commands`, `${prefix}setplainwelcome - sets message for plain welcome message\n${prefix}setwelcomeplainchannel - sets channel to send plain welcome message\n${prefix}testplainwelcome - sends plain welcome message\n${prefix}deleteplainwelcome - deletes plain welcome message`)
         .addField(`Welcome variables`, `?server - shows server name 
-?tag - shows member's full name - destroy#0001
-?mention - mentions new user - @destroy
-?user - shows new user username - destroy
+?tag - shows member's full name - map#0001
+?mention - mentions new user - @map
+?user - shows new user username - map
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?rank - shows join position - 30th member`)
@@ -3601,9 +3601,9 @@ embed: embed
     .setColor(`2f3136`)
     .setTitle(`Boost message variables`)
     .setDescription(`?server - shows server name 
-?tag shows member's full name - destroy#0001
-?mention - mentions new user - @destroy
-?user - shows new user username - destroy
+?tag shows member's full name - map#0001
+?mention - mentions new user - @map
+?user - shows new user username - map
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?boostscount - shows number of boosts from the server - 10 boosts
@@ -3617,9 +3617,9 @@ message.lineReplyNoMention(variables)
     .setColor(`2f3136`)
     .addField(`Boost embed commands`, `${prefix}setboostchannel - sets boost channel (requiered)\n${prefix}setboosttitle - sets boost message title\n${prefix}setboostcolor - sets boost message color (can be an hex code or color name only, otherwise this module might have errors)\n${prefix}setboostdescription - sets boost description (requiered)\n${prefix}setboostthumbnail - sets boost messsage thumbnail\n${prefix}setboostimage - sets boost message image\n${prefix}setboostfooter - sets boost message footer\n${prefix}testboost - sends boost message`)
     .addField(`Welcome variables`, `?server - shows server name 
-?tag shows member's full name - destroy#0001
-?mention - mentions new user - @destroy
-?user - shows new user username - destroy
+?tag shows member's full name - map#0001
+?mention - mentions new user - @map
+?user - shows new user username - map
 ?useravatar - shows user's avatar
 ?serveravatar - shows server's avatar
 ?boostscount - shows number of boosts from the server - 10 boosts`)
