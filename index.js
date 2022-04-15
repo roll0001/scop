@@ -2698,10 +2698,10 @@ const filterLevels = {
           .setDescription(` \`${prefix}role+/- [user id / user mention] [role]\`
 **Example:**
 
-${prefix}role+ @sent#0001 staff or ${prefix}role+ 371224177186963460 staff
+${prefix}role+ @map#0001 staff or ${prefix}role+ 940625590594203709 staff
 (adds role to user)
 
-${prefix}role- @sent#0001 special or ${prefix}role- 371224177186963460 special
+${prefix}role- @map#0001 special or ${prefix}role- 940625590594203709 special
 (removes role from user)
 
 Aliases: \`roleadd\`, \`roleremove\`, \`rolermv\``)
