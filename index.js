@@ -1253,7 +1253,6 @@ if (message.content === `${prefix}invite`|| message.content === `${prefix}suppor
             .setTimestamp(Date.now())
       .setColor('2f3136')
         const button4 = new buttonClient.MessageButton()
-        const button1 = new buttonClient.MessageButton()
       .setLabel("Invite Link")
       .setURL("https://discord.com/api/oauth2/authorize?client_id=957962158124171296&permissions=8&scope=bot")
     buttonClient.send(null, { channel: message.channel.id, embed, buttons: [[button4]] })
