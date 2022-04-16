@@ -3783,7 +3783,7 @@ message.lineReplyNoMention(variables)
         if(message.content.startsWith(`${prefix}setnick`) || message.content.startsWith(`${prefix}setnickname`)) {
           const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_nicknames\``)
+          .setDescription(`<:check_warning:958760529122455673> ${message.author}: You're **missing** permissions \`manage_nicknames\``)
 
           const missingargs = new Discord.MessageEmbed()
           .setTitle(`Missing arguments!`)
@@ -3793,11 +3793,11 @@ Aliases: \`setnick\``)
 
 const hieracy = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You cannot set a nickname to someone with an equal or higher role`)
+          .setDescription(`<:check_warning:958760529122455673> ${message.author}: You cannot set a nickname to someone with an equal or higher role`)
 
           const hieracy2 = new Discord.MessageEmbed()
           .setColor(`RED`)
-          .setDescription(`<a:check_no:946457416294363216> i couldn't set the nickname to this member`)
+          .setDescription(`<a:check_no:958747076022390854> i couldn't set the nickname to this member`)
           if(!message.member.hasPermission(`MANAGE_NICKNAMES`)) return message.lineReplyNoMention(missingperms)
           if(!message.guild.me.permissions.has(`MANAGE_NICKNAMES`)) return message.lineReplyNoMention(missingperms)
           var params = message.content.substring().split(" ");
@@ -3813,23 +3813,23 @@ const hieracy = new Discord.MessageEmbed()
           if(!newNickname) {
             let changed = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:946457370597396500> deleted ${user.user.tag}'s nickname`)
+            .setDescription(`<a:check_yes:958747074281746452> deleted ${user.user.tag}'s nickname`)
             message.lineReplyNoMention(changed)
           } else {
             let deleted = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:946457370597396500> changed \`${user.user.tag}'s\` nickname to \`${newNickname}\``)
+            .setDescription(`<a:check_yes:958747074281746452> changed \`${user.user.tag}'s\` nickname to \`${newNickname}\``)
           message.lineReplyNoMention(deleted)
           }
         }
         if(message.content.startsWith(`${prefix}setbotnick`) || message.content.startsWith(`${prefix}setbotnickname`)) {
           const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_nicknames\``)
+          .setDescription(`<:check_warning:958760529122455673> ${message.author}: You're **missing** permissions \`manage_nicknames\``)
 
           const botmissingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`change_nickname\``)
+          .setDescription(`<:check_warning:958760529122455673> ${client.user} is **missing** permissions \`change_nickname\``)
           if(!message.member.hasPermission('MANAGE_NICKNAMES') && message.author.id !== south) return message.lineReplyNoMention(missingperms)
           if(!message.guild.me.permissions.has('CHANGE_NICKNAME')) return message.lineReplyNoMention(botmissingperms)
           var params = message.content.substring().split(" ");
@@ -3839,12 +3839,12 @@ const hieracy = new Discord.MessageEmbed()
           if(!botNickname) {
             let deleted = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:946457370597396500> removed event's nickname`)
+            .setDescription(`<a:check_yes:958747074281746452>  removed event's nickname`)
             message.lineReplyNoMention(deleted)
           } else {
             let changed = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:946457370597396500> changed event's nickname to ${botNickname}`)
+            .setDescription(`<a:check_yes:958747074281746452>  changed event's nickname to ${botNickname}`)
           message.lineReplyNoMention(changed)
           }
         } 
@@ -3903,7 +3903,7 @@ const hieracy = new Discord.MessageEmbed()
         if (message.content === (`${prefix}nsfw 4k`)) {
           const nonnsfw = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
           if (!message.channel.nsfw) return message.lineReplyNoMention(nonnsfw)
             const { image } = await fetch('http://api.nekos.fun:8080/api/4k').then(response => response.json())
             const doneEmbed = new Discord.MessageEmbed()
@@ -3916,7 +3916,7 @@ const hieracy = new Discord.MessageEmbed()
       if (message.content === (`${prefix}nsfw cum`)) {
         const nonnsfw = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
           if (!message.channel.nsfw) return message.lineReplyNoMention(nonnsfw)
             const { image } = await fetch('http://api.nekos.fun:8080/api/cum').then(response => response.json())
             const doneEmbed = new Discord.MessageEmbed()
@@ -3928,7 +3928,7 @@ const hieracy = new Discord.MessageEmbed()
       if (message.content === (`${prefix}nsfw boobs`)) {
         const nonnsfw = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
           if (!message.channel.nsfw) return message.lineReplyNoMention(nonnsfw)
             const { image } = await fetch('http://api.nekos.fun:8080/api/boobs').then(response => response.json())
             const doneEmbed = new Discord.MessageEmbed()
@@ -3940,7 +3940,7 @@ const hieracy = new Discord.MessageEmbed()
       if (message.content===(`${prefix}nsfw spank`)) {
         const nonnsfw = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
           if (!message.channel.nsfw) return message.lineReplyNoMention(nonnsfw)
             const { image } = await fetch('http://api.nekos.fun:8080/api/spank').then(response => response.json())
             const doneEmbed = new Discord.MessageEmbed()
@@ -3952,7 +3952,7 @@ const hieracy = new Discord.MessageEmbed()
       if (message.content===(`${prefix}nsfw lesbian`)) {
         const nonnsfw = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
           if (!message.channel.nsfw) return message.lineReplyNoMention(nonnsfw)
             const { image } = await fetch('http://api.nekos.fun:8080/api/lesbian').then(response => response.json())
             const doneEmbed = new Discord.MessageEmbed()
@@ -3966,7 +3966,7 @@ if(message.content.startsWith(`${prefix}nsfw`)) {
 const answer = args.join(" ")
 const nonnsfw = new Discord.MessageEmbed()
 .setColor(`YELLOW`)
-.setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+.setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
 if (!message.channel.nsfw) {
   message.channel.send(nonnsfw) 
 } else if (answer == 'ass') {
