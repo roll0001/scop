@@ -222,7 +222,7 @@ client.on("message", async(message)=>{
   if(!prefix) prefix = ","
      if (message.content === `${prefix}ping`) {
       function doMagic8BallVoodoo() {
-        var rand = [`**Elon Musk's spaceship**`, `**Putin's nuclear bomb**`, `**ap1q on tiktok**`, `**Mcdonalds's wifi**`, '**the chinese government**', '**your mom**', '**your dad**', '**some bitches**', '**north korea**', '**hot asian woman around your area**', '**webhost**', `**destroy's luck**`];
+        var rand = [`**Elon Musk's spaceship**`, `**Putin's nuclear bomb**`, `**ap1q on tiktok**`, `**Mcdonalds's wifi**`, '**the chinese government**', '**your mom**', '**your dad**', '**some bitches**', '**north korea**', '**hot asian woman around your area**', '**webhost**', `**map's luck**`];
     
         return rand[Math.floor(Math.random()*rand.length)];
     }
@@ -388,10 +388,10 @@ Type \`${prefix}help [command]\` to see commands info!
           .setDescription(`Adds a role to an user or removes a role from an user
 **Example:**
 
-${prefix}role+ @destroy#0001 staff or ${prefix}role+ 9406255905942037090 staff
+${prefix}role+ @map#0001 staff or ${prefix}role+ 9406255905942037090 staff
 (adds role to user)
 
-${prefix}role- @destroy#0001 special or ${prefix}role- 940625590594203709 special
+${prefix}role- @map#0001 special or ${prefix}role- 940625590594203709 special
 (removes role from user)
 
 Aliases: \`roleadd\`, \`roleremove\`, \`rolermv\``)
@@ -1569,9 +1569,10 @@ if(message.content === `${prefix}botinfo`) {
   const info = new Discord.MessageEmbed()
   .setAuthor(`event`)
   .setColor(`2f3136`)
-  .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b91b128b3413d7ad19bd58c470169e1d.webp?size=1024`)
+  .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b21b25fd192144e154488c079e2a0e42.webp?size=1024`)
   .setDescription(`a multipurpose bot that does some great stuff...
-  **Join Support Server [here](https://discord.gg/PnZSVgUfPA)**`)
+  **Join Support Server [**here**](https://discord.gg/PnZSVgUfPA)**
+  **made** *by:* **map#0001**`)
   .addField(`statistics`,
 `guilds: **${client.guilds.cache.size} servers**
 users: **${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}**
