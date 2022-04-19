@@ -246,7 +246,7 @@ message.lineReplyNoMention(uptimeEmbed)
   if(message.content.startsWith(`${prefix}setprefix`) || message.content.startsWith(",setprefix")) {
     const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions: \`manage_server\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions: \`manage_server\``)
   
           const missingargs = new Discord.MessageEmbed()
           .setTitle(`Missing arguments!`)
@@ -323,7 +323,7 @@ Type \`${prefix}help [command]\` to see commands info!
         if (!message.channel.nsfw) {
           const nonnsfw = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're not allowed to use **nsfw** commands here`)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're not allowed to use **nsfw** commands here`)
           message.lineReplyNoMention(nonnsfw)
         } else {
          const nsfwhelp = new Discord.MessageEmbed()
@@ -1477,7 +1477,7 @@ if (message.content === `${prefix}invite`|| message.content === `${prefix}suppor
   if(message.content.startsWith(`${prefix}ben`)){
     const missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${client.user} is missing permsission \`attach_files\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${client.user} is missing permsission \`attach_files\``)
     if(message.content === (`${prefix}ben`)) return message.lineReplyNoMention("Please ask a question")
     if(!message.guild.me.permissions.has('ATTACH_FILES')) return message.linReplyNoMention(missingperms)
     args = message.content.split(" ").slice(1);
@@ -1570,9 +1570,8 @@ if(message.content === `${prefix}botinfo`) {
   .setAuthor(`fye`)
   .setColor(`2f3136`)
   .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b21b25fd192144e154488c079e2a0e42.webp?size=1024`)
-  .setDescription(`a fye bot that does some fye stuff...
-  **Join Support Server [here](https://discord.gg/PnZSVgUfPA)**
-  **made** *by:* **map#0001**`)
+  .setDescription(`fye is fye bot that does some fye stuff...
+  **Join Support Server [here](https://discord.gg/PnZSVgUfPA)**`)
   .addField(`statistics`,
 `guilds: **${client.guilds.cache.size} servers**
 users: **${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}**
@@ -1632,7 +1631,7 @@ if(message.content.toLowerCase().startsWith(`${prefix}getbotinvite`)) {
       if (!message.member.hasPermission(['MANAGE_MESSAGES']) || !message.guild.me.permissions.has('MANAGE_MESSAGES')) {
             const missingperms = new Discord.MessageEmbed()
             .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_messages\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_messages\``)
             message.lineReplyNoMention(missingperms)
       } else {
         const missingargs = new Discord.MessageEmbed()
@@ -1642,7 +1641,7 @@ if(message.content.toLowerCase().startsWith(`${prefix}getbotinvite`)) {
 
         const bignumber = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription("<:check_warning:950470703717703760> **Please select a number** ***between*** **5000 and 1**")
+        .setDescription("<:check_warning:958760529122455673>  **Please select a number** ***between*** **5000 and 1**")
 
         const limitation = new Discord.MessageEmbed()
         .setColor(`2f3136`)
@@ -1784,7 +1783,7 @@ if(message.content.toLowerCase().startsWith(`${prefix}getbotinvite`)) {
         let time = db.fetch(user.id + message.guild.id + '.afktime')
       let warning = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${user} is currently AFK: ${reasontosend} - **${moment(time).fromNow()}**`)
+      .setDescription(`<:check_warning:958760529122455673>  ${user} is currently AFK: ${reasontosend} - **${moment(time).fromNow()}**`)
       message.lineReplyNoMention(warning)
       }
      });
@@ -2160,7 +2159,7 @@ if(message.content.startsWith(`${prefix}embed`)) {
       if (!message.member.hasPermission(['ADMINISTRATOR'] || ['MANAGE_SERVER']))  {
       const missingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
       message.channel.send(missingperms)
 } else {
     args = message.content.split(" ").slice(1);
@@ -2193,7 +2192,7 @@ if(message.content.startsWith(`${prefix}embed`)) {
               if(!message.member.hasPermission('MANAGE_ROLES')) {
                 const missingperms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_roles\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_roles\``)
       message.channel.send(missingperms)
               } else {
                 message.channel.updateOverwrite(message.channel.guild.roles.everyone, { SEND_MESSAGES: false });
@@ -2205,7 +2204,7 @@ if(message.content.startsWith(`${prefix}embed`)) {
               if (!message.guild.me.permissions.has('MANAGE_ROLES')) { 
                 const perms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_roles\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_roles\``)
                 message.lineReplyNoMention(perms)
                }
             }
@@ -2213,7 +2212,7 @@ if(message.content.startsWith(`${prefix}embed`)) {
               if(!message.member.hasPermission('MANAGE_ROLES')) {
                 const missingperms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_roles\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_roles\``)
       message.channel.send(missingperms)
               } else {
                 message.channel.updateOverwrite(message.channel.guild.roles.everyone, { SEND_MESSAGES: true });
@@ -2225,7 +2224,7 @@ if(message.content.startsWith(`${prefix}embed`)) {
               if (!message.guild.me.permissions.has('MANAGE_ROLES')) { 
                 const perms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_roles\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_roles\``)
                 message.lineReplyNoMention(perms)
                }
             }
@@ -2240,13 +2239,13 @@ if(message.content.startsWith(`${prefix}embed`)) {
               if (!message.guild.me.permissions.has('MANAGE_GUILD')) { 
                 const perms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_server\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_server\``)
                 message.lineReplyNoMention(perms)
                }
               if (!message.member.hasPermission(['ADMINISTRATOR'])) {
                 const missingperms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`administrator\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`administrator\``)
                  message.lineReplyNoMention(missingperms)
             } else {
                args = message.content.split(" ").slice(1);
@@ -2276,13 +2275,13 @@ if(message.content.startsWith(`${prefix}embed`)) {
               if (!message.guild.me.permissions.has('MANAGE_GUILD')) { 
                 const perms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_server\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_server\``)
                 message.lineReplyNoMention(perms)
                }
               if (!message.member.hasPermission(['ADMINISTRATOR'])) {
                 const missingperms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`administrator\``)
+                .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`administrator\``)
                  message.lineReplyNoMention(missingperms)
             } else {
                args = message.content.split(" ").slice(1);
@@ -2311,18 +2310,18 @@ if(message.content.startsWith(`${prefix}embed`)) {
             if(message.content.startsWith(`${prefix}setguildbanner`) || message.content.startsWith(`${prefix}setserverbanner`)) {
                 const noboost = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-                .setDescription(`<:check_warning:950470703717703760> This server needs to have at least 7 boosts in order to set a banner!`)
+                .setDescription(`<:check_warning:958760529122455673>  This server needs to have at least 7 boosts in order to set a banner!`)
               if (!message.guild.me.permissions.has('MANAGE_GUILD')) { 
                 const perms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_server\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_server\``)
                 message.lineReplyNoMention(perms)
                }
                if(message.guild.premiumSubscriptionCount < 7)  return message.lineReplyNoMention(noboost)
               if (!message.member.hasPermission(['ADMINISTRATOR'])) {
                 const missingperms = new Discord.MessageEmbed()
                 .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`administrator\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`administrator\``)
                  message.lineReplyNoMention(missingperms)
             } else {
                args = message.content.split(" ").slice(1);
@@ -2358,7 +2357,7 @@ if(message.content.startsWith(`${prefix}embed`)) {
      if (!message.member.hasPermission('MANAGE_GUILD')) {
        const missingperms = new Discord.MessageEmbed()
        .setColor(`YELLOW`)
-       .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+       .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         message.lineReplyNoMention(missingperms)
   } else {
 message.delete()
@@ -2439,10 +2438,10 @@ const filterLevels = {
     if(message.content.startsWith(`${prefix}tts`)) {
       const missingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`send_tts_messages\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`send_tts_messages\``)
       const botmissingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`send_tts_messages\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`send_tts_messages\``)
       const missingargs = new Discord.MessageEmbed()
       .setTitle("Missing arguments!")
       .setColor(`RED`)
@@ -2467,10 +2466,10 @@ const filterLevels = {
     if (message.content.startsWith(`${prefix}ban`) && !message.content.includes(`${prefix}banner`)) {
       const missingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`ban_members\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`ban_members\``)
         const perms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-            .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`ban_members\``)
+            .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`ban_members\``)
       if (!message.member.hasPermission('BAN_MEMBERS')) return message.lineReplyNoMention(missingperms)
   if (!message.guild.me.permissions.has('BAN_MEMBERS')) return message.lineReplyNoMention(perms)
   if (message.mentions.users.size === 0 && message.member.hasPermission('BAN_MEMBERS') && message.content === `${prefix}ban`) { 
@@ -2525,11 +2524,11 @@ const filterLevels = {
       if(message.content.startsWith(`${prefix}unban`)) {
           const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`ban_members\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`ban_members\``)
     
             const perms = new Discord.MessageEmbed()
             .setColor(`YELLOW`)
-            .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`ban_members\``)
+            .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`ban_members\``)
 
             const missingargs = new Discord.MessageEmbed()
             .setTitle(`Missing arguments`)
@@ -2549,11 +2548,11 @@ const filterLevels = {
       if (message.content.startsWith(`${prefix}kick`)) {
         const perms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`kick_members\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`kick_members\``)
 
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`kick_members\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`kick_members\``)
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.lineReplyNoMention(missingperms)
     if (!message.guild.me.permissions.has('KICK_MEMBERS')) return message.lineReplyNoMention(perms)
     if (message.mentions.users.size === 0 && message.member.hasPermission('KICK_MEMBERS') && message.content === `${prefix}kick`) { 
@@ -2612,7 +2611,7 @@ const filterLevels = {
         if(message.content.startsWith(`${prefix}role+`) || message.content.startsWith(`${prefix}roleadd`)) {
           const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_roles\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_roles\``)
 
           const missingargs = new Discord.MessageEmbed()
           .setTitle(`Missing arguments!`)
@@ -2651,7 +2650,7 @@ const filterLevels = {
         if(message.content.startsWith(`${prefix}role-`) || message.content.startsWith(`${prefix}rolermv`) || message.content.startsWith(`${prefix}roleremove`)) {
           const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_roles\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_roles\``)
 
           const missingargs = new Discord.MessageEmbed()
           .setTitle(`Missing arguments!`)
@@ -2689,7 +2688,7 @@ const filterLevels = {
         if(message.content === `${prefix}role`) {
           const missingperms = new Discord.MessageEmbed()
           .setColor(`YELLOW`)
-          .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_roles\``)
+          .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_roles\``)
           if(!message.member.hasPermission(`MANAGE_ROLES`)) return message.lineReplyNoMention(missingperms)
           if(!message.guild.me.permissions.has(`MANAGE_ROLES`)) return message.lineReplyNoMention(missingperms)
           const missingargs = new Discord.MessageEmbed()
@@ -2717,7 +2716,7 @@ message.lineReplyNoMention(missingargs)
        if(message.content.startsWith(`${prefix}setautoresponder`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -2743,7 +2742,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}delautoresponder`) || message.content.startsWith(`${prefix}deleteautoresponder`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2774,7 +2773,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}setautorole bots`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2795,7 +2794,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}deleteautorole bots`) || message.content.startsWith(`${prefix}delautorole bots`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2816,7 +2815,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}setautorole humans`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2837,7 +2836,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}deleteautorole humans`) || message.content.startsWith(`${prefix}delautorole humans`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2858,7 +2857,7 @@ console.log(console.error)
        if(message.content === `${prefix}autorole list`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingch = new Discord.MessageEmbed()
         .setColor(`RED`)
         .setDescription(`<a:check_no:946457416294363216> There are no roles marked as auto role!`)
@@ -2882,7 +2881,7 @@ console.log(console.error)
        if(message.content.toLowerCase() === `${prefix}setautorole`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setColor(`RED`)
         .setDescription(`${prefix}setautorole humans [role id / role mention - sets autorole for regular users\n${prefix}setautorole bots [role id / role mention] - sets autorole for bots`)
@@ -2892,7 +2891,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}setpingonjoin`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2912,7 +2911,7 @@ console.log(console.error)
        if(message.content.startsWith(`${prefix}deletepingonjoin`) || message.content.startsWith(`${prefix}delpingonjoin`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
 
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
@@ -2932,7 +2931,7 @@ console.log(console.error)
        if(message.content === `${prefix}pingonjoin list`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingch = new Discord.MessageEmbed()
         .setColor(`RED`)
         .setDescription(`<a:check_no:946457416294363216> There are no channels where new members are pinged!`)
@@ -2953,7 +2952,7 @@ console.log(console.error)
         let joindm = args.join(' ')
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -2971,7 +2970,7 @@ console.log(console.error)
        if(message.content === `${prefix}deletejoindm` || message.content === `${prefix}deljoindm`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingch = new Discord.MessageEmbed()
         .setColor(`RED`)
         .setDescription(`<a:check_no:946457416294363216> There is no message to send in dm's`)
@@ -2987,7 +2986,7 @@ console.log(console.error)
        if(message.content === `${prefix}joindm message`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingch = new Discord.MessageEmbed()
         .setColor(`RED`)
         .setDescription(`<a:check_no:946457416294363216> There is no message to send in dm's`)
@@ -3013,7 +3012,7 @@ console.log(console.error)
       if(message.content.toLowerCase().startsWith(`${prefix}setwelcomechannel`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3031,7 +3030,7 @@ console.log(console.error)
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3054,7 +3053,7 @@ message.lineReplyNoMention(can)
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3077,7 +3076,7 @@ message.lineReplyNoMention(can)
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3096,7 +3095,7 @@ message.lineReplyNoMention(can)
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3114,7 +3113,7 @@ message.lineReplyNoMention(can)
       if(message.content.toLowerCase() === `${prefix}delwelcome` || message.content.toLowerCase() === `${prefix}deletewelcome`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
         db.delete(`welcome_${message.guild.id}`);
         db.delete(`desc_${message.guild.id}`)
@@ -3132,14 +3131,14 @@ message.lineReplyNoMention(can)
       if(message.content.toLowerCase() === `${prefix}testwelcome`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
         let chreq = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author} channel isn't configured`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author} channel isn't configured`)
         let desreq = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author} description isn't configured`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author} description isn't configured`)
         let plaine = db.fetch(`welcometop_${message.guild.id}`)
         let channel = db.get(`welcome_${message.guild.id}`);
         let text = db.get(`desc_${message.guild.id}`)
@@ -3181,7 +3180,7 @@ client.channels.cache.get(channel).send(isplaine, {
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3208,7 +3207,7 @@ client.channels.cache.get(channel).send(isplaine, {
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3235,7 +3234,7 @@ message.lineReplyNoMention(can)
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3261,7 +3260,7 @@ message.lineReplyNoMention(can)
       if(message.content.toLowerCase() === (`${prefix}welcome variables`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
         let variables = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
@@ -3297,7 +3296,7 @@ message.lineReplyNoMention(variables)
         var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3323,7 +3322,7 @@ message.lineReplyNoMention(variables)
       if(message.content.toLowerCase().startsWith(`${prefix}setwelcomeplainchannel`)) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3340,14 +3339,14 @@ message.lineReplyNoMention(variables)
       if(message.content.toLowerCase() === `${prefix}testplainwelcome`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
         let chreq = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author} channel isn't configured`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author} channel isn't configured`)
         let desreq = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author} message isn't configured`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author} message isn't configured`)
         let channel = db.fetch(`welcomeplainchannel_${message.guild.id}`)
         let text = db.fetch(`welcomeplain_${message.guild.id}`)
         if(!channel) return message.channel.send(chreq)
@@ -3359,7 +3358,7 @@ message.lineReplyNoMention(variables)
       if(message.content.toLowerCase() === `${prefix}delplainwelcome` || message.content.toLowerCase() === `${prefix}deleteplainwelcome`) {
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
         db.delete(`welcomeplainchannel_${message.guild.id}`)
         db.delete(`welcomeplain_${message.guild.id}`)
@@ -3378,7 +3377,7 @@ message.lineReplyNoMention(variables)
      if(message.content.toLowerCase().startsWith(`${prefix}setboostchannel`)) {
       const missingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
       const missingargs = new Discord.MessageEmbed()
       .setTitle(`Missing arguments!`)
       .setColor(`RED`)
@@ -3396,7 +3395,7 @@ message.lineReplyNoMention(variables)
       var args = message.content.substring().split(" ");
       const missingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
       const missingargs = new Discord.MessageEmbed()
       .setTitle(`Missing arguments!`)
       .setColor(`RED`)
@@ -3423,7 +3422,7 @@ message.lineReplyNoMention(can)
       var args = message.content.substring().split(" ");
       const missingperms = new Discord.MessageEmbed()
       .setColor(`YELLOW`)
-      .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+      .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
       const missingargs = new Discord.MessageEmbed()
       .setTitle(`Missing arguments!`)
       .setColor(`RED`)
@@ -3442,7 +3441,7 @@ message.lineReplyNoMention(can)
       var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3461,7 +3460,7 @@ message.lineReplyNoMention(can)
       var args = message.content.substring().split(" ");
         const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         const missingargs = new Discord.MessageEmbed()
         .setTitle(`Missing arguments!`)
         .setColor(`RED`)
@@ -3488,7 +3487,7 @@ message.lineReplyNoMention(can)
     var args = message.content.substring().split(" ");
     const missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
     const missingargs = new Discord.MessageEmbed()
     .setTitle(`Missing arguments!`)
     .setColor(`RED`)
@@ -3512,7 +3511,7 @@ message.channel.send(`Now boost thumbnail will be \n \`${mes}\` `)
     var args = message.content.substring().split(" ");
     const missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
     const missingargs = new Discord.MessageEmbed()
     .setTitle(`Missing arguments!`)
     .setColor(`RED`)
@@ -3534,7 +3533,7 @@ message.channel.send(`Now boost image will be \n \`${text}\` `)
   if(message.content.toLowerCase().startsWith(`${prefix}deleteboost`) || message.content.toLowerCase().startsWith(`${prefix}delboost`)) {
     const missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
     if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
     db.delete(`boostchannel_${message.guild.id}`);
     db.delete(`boostdesc_${message.guild.id}`)
@@ -3551,14 +3550,14 @@ message.channel.send(`Now boost image will be \n \`${text}\` `)
   if(message.content.toLowerCase().startsWith(`${prefix}testboost`)) {
     const missingperms = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
         let chreq = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author} channel isn't configured`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author} channel isn't configured`)
         let desreq = new Discord.MessageEmbed()
         .setColor(`YELLOW`)
-        .setDescription(`<:check_warning:950470703717703760> ${message.author} description isn't configured`)
+        .setDescription(`<:check_warning:958760529122455673>  ${message.author} description isn't configured`)
         let channel = db.fetch(`boostchannel_${message.guild.id}`);
         let text = db.fetch(`boostdesc_${message.guild.id}`)
         let img = db.fetch(`boostimage_${message.guild.id}`)
@@ -3594,7 +3593,7 @@ embed: embed
   if(message.content.toLowerCase() === (`${prefix}boost variables`)) {
     const missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_server\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_server\``)
     if (!message.member.hasPermission("MANAGE_GUILD")) return message.lineReplyNoMention(missingperms)
     let variables = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
@@ -3635,11 +3634,11 @@ message.lineReplyNoMention(variables)
   if(message.content.startsWith(`${prefix}imgaddemoji`)) {
     let missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_emojis\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_emojis\``)
 
     let botperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_emojis\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_emojis\``)
 
     const bruhlol = new Discord.MessageEmbed()
     .setColor(`RED`)
@@ -3666,11 +3665,11 @@ message.lineReplyNoMention(variables)
   if(message.content.startsWith(`${prefix}addemoji`)) {
     let missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_emojis\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_emojis\``)
 
     let botmissingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_emojis\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_emojis\``)
 
     let missingargs = new Discord.MessageEmbed()
     .setTitle(`Missing arguments!`)
@@ -3700,11 +3699,11 @@ message.lineReplyNoMention(variables)
   if(message.content.startsWith(`${prefix}addmultiple`)) {
     let missingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${message.author}: You're **missing** permissions \`manage_emojis\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${message.author}: You're **missing** permissions \`manage_emojis\``)
 
     let botmissingperms = new Discord.MessageEmbed()
     .setColor(`YELLOW`)
-    .setDescription(`<:check_warning:950470703717703760> ${client.user} is **missing** permissions \`manage_emojis\``)
+    .setDescription(`<:check_warning:958760529122455673>  ${client.user} is **missing** permissions \`manage_emojis\``)
 
     let missingargs = new Discord.MessageEmbed()
     .setTitle(`Missing arguments!`)
