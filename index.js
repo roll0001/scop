@@ -34,7 +34,7 @@ http.createServer((_, res) => res.end("alive")).listen(8080)
 client.on("ready", async (member) => {
 let matatactu = new Discord.MessageEmbed()
 .setColor("GREEN")
-.setDescription(`<:online:958747075246428190>  event was reconnected to the host...`);
+.setDescription(`<:online:958747075246428190>  fye was reconnected to the host...`);
 const wrb = new Discord.WebhookClient("958744924860321893", "eQZPP_LvCSFALKTIUFMDBbgDYkli00UseViNVIkpUL1Mm869AMUFiqeMuk-_h40-XtQb");
 await wrb.send(matatactu)
   const activities = [
@@ -281,7 +281,7 @@ message.lineReplyNoMention(uptimeEmbed)
             const embed = new Discord.MessageEmbed()
                 .setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }))
                 
-                .setTitle('event </>')
+                .setTitle('fye </>')
 
                 .setDescription(`__**Bot Commands**__
 
@@ -313,7 +313,7 @@ Type \`${prefix}help [command]\` to see commands info!
 
 **Type** \`${prefix}help nsfw\` **for NSFW commands!**
 `)
-                .setFooter(`© event | 105 commands`)
+                .setFooter(`© fye | 105 commands`)
                 .setColor(`2f3136`)
                 .setTimestamp(Date.now());
                 
@@ -332,7 +332,7 @@ Type \`${prefix}help [command]\` to see commands info!
          .setDescription(`Type \`${prefix}nsfw [command]\` for results
         
 \`ass\`, \`bdsm\`, \`blowjob\`, \`cum\`, \`blowjob\`, \`doujin\`, \`feet\`, \`femdom\`, \`foxgirl\`, \`gifs\`, \`glasses\`, \`hentai\`, \`netorare\`, \`maid\`, \`masturbation\`, \`orgy\`, \`panties\`, \`pussy\`, \`school\`, \`succubus\`, \`tentacles\`, \`thighs\`, \`uglyBastard\`, \`uniform\`, \`yuri\`, \`zettaiRyouiki\`, \`cum\`, \`boobs\`, \`spank\`, \`lesbian\`, \`4k\``)
-          .setFooter(`© event | 31 commands`)
+          .setFooter(`© fye | 31 commands`)
                 .setTimestamp(Date.now());
          message.lineReplyNoMention(nsfwhelp)
         }
@@ -1567,7 +1567,7 @@ if(message.content.startsWith(`${prefix}banner`)) {
 if(message.content === `${prefix}botinfo`) {
   const prettyMilliseconds = require("pretty-ms");
   const info = new Discord.MessageEmbed()
-  .setAuthor(`event`)
+  .setAuthor(`fye`)
   .setColor(`2f3136`)
   .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b21b25fd192144e154488c079e2a0e42.webp?size=1024`)
   .setDescription(`a bot that does some great stuff...
@@ -3840,12 +3840,12 @@ const hieracy = new Discord.MessageEmbed()
           if(!botNickname) {
             let deleted = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:958747074281746452>  removed event's nickname`)
+            .setDescription(`<a:check_yes:958747074281746452>  removed fye's nickname`)
             message.lineReplyNoMention(deleted)
           } else {
             let changed = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:958747074281746452>  changed event's nickname to ${botNickname}`)
+            .setDescription(`<a:check_yes:958747074281746452>  changed fye's nickname to ${botNickname}`)
           message.lineReplyNoMention(changed)
           }
         } 
@@ -4090,9 +4090,9 @@ BOT GUILDS
 */
  if(message.content === `${prefix}guildcount`) {
    let counter = new Discord.MessageEmbed()
-   .setTitle(`event guild count`)
+   .setTitle(`fye guild count`)
    .setColor(`2f3136`)
-   .setDescription(`> **event is in ${client.guilds.cache.size} guilds**`)
+   .setDescription(`> **fye is in ${client.guilds.cache.size} guilds**`)
    .setTimestamp()
    message.lineReplyNoMention(counter)
  }
@@ -4225,7 +4225,7 @@ message.delete()
                  )
              .setTimestamp()
              .setFooter(
-               `event | Page - ${page}/${Math.round(client.guilds.cache.size / 10 + 1)}`
+               `fye | Page - ${page}/${Math.round(client.guilds.cache.size / 10 + 1)}`
              )
              .setDescription(description);
            msg.edit(embed);
