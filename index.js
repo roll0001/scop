@@ -34,7 +34,7 @@ http.createServer((_, res) => res.end("alive")).listen(8080)
 client.on("ready", async (member) => {
 let matatactu = new Discord.MessageEmbed()
 .setColor("GREEN")
-.setDescription(`<:online:958747075246428190>  sick was reconnected to the host...`);
+.setDescription(`<:online:958747075246428190>  tomb was reconnected to the host...`);
 const wrb = new Discord.WebhookClient("958744924860321893", "eQZPP_LvCSFALKTIUFMDBbgDYkli00UseViNVIkpUL1Mm869AMUFiqeMuk-_h40-XtQb");
 await wrb.send(matatactu)
   const activities = [
@@ -281,7 +281,7 @@ message.lineReplyNoMention(uptimeEmbed)
             const embed = new Discord.MessageEmbed()
                 .setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }))
                 
-                .setTitle('sick </>')
+                .setTitle('tomb </>')
 
                 .setDescription(`__**Bot Commands**__
 
@@ -313,7 +313,7 @@ Type \`${prefix}help [command]\` to see commands info!
 
 **Type** \`${prefix}help nsfw\` **for NSFW commands!**
 `)
-                .setFooter(`© sick | 105 commands`)
+                .setFooter(`© tomb | 105 commands`)
                 .setColor(`2f3136`)
                 .setTimestamp(Date.now());
                 
@@ -332,7 +332,7 @@ Type \`${prefix}help [command]\` to see commands info!
          .setDescription(`Type \`${prefix}nsfw [command]\` for results
         
 \`ass\`, \`bdsm\`, \`blowjob\`, \`cum\`, \`blowjob\`, \`doujin\`, \`feet\`, \`femdom\`, \`foxgirl\`, \`gifs\`, \`glasses\`, \`hentai\`, \`netorare\`, \`maid\`, \`masturbation\`, \`orgy\`, \`panties\`, \`pussy\`, \`school\`, \`succubus\`, \`tentacles\`, \`thighs\`, \`uglyBastard\`, \`uniform\`, \`yuri\`, \`zettaiRyouiki\`, \`cum\`, \`boobs\`, \`spank\`, \`lesbian\`, \`4k\``)
-          .setFooter(`© sick | 31 commands`)
+          .setFooter(`© tomb | 31 commands`)
                 .setTimestamp(Date.now());
          message.lineReplyNoMention(nsfwhelp)
         }
@@ -1567,11 +1567,11 @@ if(message.content.startsWith(`${prefix}banner`)) {
 if(message.content === `${prefix}botinfo`) {
   const prettyMilliseconds = require("pretty-ms");
   const info = new Discord.MessageEmbed()
-  .setAuthor(`sick`)
+  .setAuthor(`tomb`)
   .setColor(`2f3136`)
   .setThumbnail (`https://cdn.discordapp.com/avatars/957962158124171296/b21b25fd192144e154488c079e2a0e42.webp?size=1024`)
-  .setDescription(`mutlipurpose bot that does sick stuff
-  <:sickcord_link:966291948031840296> devloped and maintained:lüh#1337 `)
+  .setDescription(`mutlipurpose bot that does tomb stuff
+  <:tombcord_link:966291948031840296> devloped and maintained:lüh#1337 `)
   .addField(`statistics`,
 `guilds: **${client.guilds.cache.size} servers**
 users: **${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}**
@@ -3839,12 +3839,12 @@ const hieracy = new Discord.MessageEmbed()
           if(!botNickname) {
             let deleted = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:958747074281746452>  removed sick's nickname`)
+            .setDescription(`<a:check_yes:958747074281746452>  removed tomb's nickname`)
             message.lineReplyNoMention(deleted)
           } else {
             let changed = new Discord.MessageEmbed()
             .setColor(`GREEN`)
-            .setDescription(`<a:check_yes:958747074281746452>  changed sick's nickname to ${botNickname}`)
+            .setDescription(`<a:check_yes:958747074281746452>  changed tomb's nickname to ${botNickname}`)
           message.lineReplyNoMention(changed)
           }
         } 
@@ -4089,9 +4089,9 @@ BOT GUILDS
 */
  if(message.content === `${prefix}guildcount`) {
    let counter = new Discord.MessageEmbed()
-   .setTitle(`sick guild count`)
+   .setTitle(`tomb guild count`)
    .setColor(`2f3136`)
-   .setDescription(`> **sick is in ${client.guilds.cache.size} guilds**`)
+   .setDescription(`> **tomb is in ${client.guilds.cache.size} guilds**`)
    .setTimestamp()
    message.lineReplyNoMention(counter)
  }
@@ -4224,7 +4224,7 @@ message.delete()
                  )
              .setTimestamp()
              .setFooter(
-               `sick | Page - ${page}/${Math.round(client.guilds.cache.size / 10 + 1)}`
+               `tomb | Page - ${page}/${Math.round(client.guilds.cache.size / 10 + 1)}`
              )
              .setDescription(description);
            msg.edit(embed);
